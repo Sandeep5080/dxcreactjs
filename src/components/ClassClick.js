@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function ClassClick() {
-     
-    return (
-        <div>
-            <button>Click me class</button>
-        </div>
-    )
+export class ClassClick extends Component {
+    clickHandler(){
+        console.log('clicked from classclick')
+    }
+    render() {
+        return (
+            <div>
+               <button onClick = {this.clickHandler}>Click me class</button> 
+            </div>
+        )
+    }
 }
 
 export default ClassClick
