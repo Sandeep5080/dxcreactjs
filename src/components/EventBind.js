@@ -7,12 +7,12 @@ constructor(props) {
     this.state = {
          message: 'Hello'
     }
-    this.clickHanler = this.clickHandler.bind(this)
+   // this.clickHandler = this.clickHandler.bind(this)
 }
-    clickHandler(){
-        console.log(this)
+    clickHandler = () =>{
+        
          this.setState({
-            message: 'good bye'
+            message: 'good night'
          })
     }
     
@@ -29,5 +29,5 @@ constructor(props) {
     }
 }
 
-export default EventBind
+export default EventBind  
  
