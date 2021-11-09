@@ -2,7 +2,9 @@ import React,{Component} from "react";
 
 class  Welcome extends Component {
     render(){
-        return <h1>Welcome mr{this.props.name} user{this.props.college}</h1>
+        const {name,alias} = this.props
+        const{State1,State2} = this.State
+        return <h1>Welcome mr{name} your alias is {alias}</h1>
     }
 }
 export default Welcome
