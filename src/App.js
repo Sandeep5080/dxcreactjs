@@ -11,6 +11,7 @@ import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
 import Stylesheet from './components/Stylesheet';
+import Inline from './components/Inline';
 
 
 
@@ -18,6 +19,7 @@ import Stylesheet from './components/Stylesheet';
 function App() {
   return (
     <div className="App">
+      <Inline/>
       <Stylesheet enabled = {true}/>
       <NameList/>
       <UserGreeting/>
