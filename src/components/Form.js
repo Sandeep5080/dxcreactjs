@@ -30,10 +30,16 @@ import React, { Component } from 'react'
                 topic: event.target.value
             })
         }
+        handleSubmit = (event) => {
+            alert(`${this.state.username} ${this.state.comments} ${this.state.topic}`)
+            event.preventDefault() 
+        }
+    
     
     render() {
+        const {username, comments, topic} = this.state
         return (
-            <form>
+            <form onSubmit = {this.handleSubmit}>
                 <div>
                     <label>username</label>
                     <input type='text' value ={this.state.username} onChange = {this.handleUsernameChange} />
@@ -51,6 +57,7 @@ import React, { Component } from 'react'
 
                     </select>
                 </div>
+                <button type = "submit" >Submit</button>
             </form>
         )
     }

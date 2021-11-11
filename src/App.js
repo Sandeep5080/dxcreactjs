@@ -15,6 +15,8 @@ import Inline from './components/Inline';
 import './appStyles.css'
 import styles from './appStyles.module.css'
 import Form from './components/Form';
+import Fragments from './components/Fragments';
+import NewTable from './components/NewTable';
  
 
 
@@ -24,31 +26,8 @@ import Form from './components/Form';
 function App() {
   return (
     <div className="App">
-      <Form/>
-      <h1 className = {styles.success}>success</h1>
-    <h1 className = 'error'>error</h1>
-      <Inline/>
-      <Stylesheet enabled = {true}/>
-      <NameList/>
-      <UserGreeting/>
-      <ParentComponent/>
-      <EventBind/>
-      <ClassClick/>
-      <FunctionClick/>
-      <Counter/>
-    <Message/>
-
+      <NewTable/>
       
-    <Greet name = "sandeep" college = "IIT"/>
-    <p>this is children property</p>
-    <Greet/>
-
-    <Greet name = "Reddy" college = "Bharath"/>
-     <button>Click me</button>
-     <Greet/>
-     <Greet/>
-
-    <Welcome name = "Raja" alias = "rajesh"/>
 
     </div>
   );
