@@ -20,6 +20,7 @@ import NewTable from './components/NewTable';
 import Parentcomp from './components/Parentcomp';
 import MemoComp from './components/MemoComp';
 import RefsDemo from './components/RefsDemo';
+import FocusInput from './components/refs/FocusInput';
  
 
 
@@ -29,7 +30,7 @@ import RefsDemo from './components/RefsDemo';
 function App() {
   return (
     <div className="App">
-      <RefsDemo/>
+      <FocusInput/>
 
     </div>
   );
