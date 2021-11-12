@@ -17,6 +17,9 @@ import styles from './appStyles.module.css'
 import Form from './components/Form';
 import Fragments from './components/Fragments';
 import NewTable from './components/NewTable';
+import Parentcomp from './components/Parentcomp';
+import MemoComp from './components/MemoComp';
+import RefsDemo from './components/RefsDemo';
  
 
 
@@ -26,8 +29,7 @@ import NewTable from './components/NewTable';
 function App() {
   return (
     <div className="App">
-      <NewTable/>
-      
+      <RefsDemo/>
 
     </div>
   );
