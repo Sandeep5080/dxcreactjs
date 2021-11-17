@@ -22,6 +22,8 @@ import MemoComp from './components/MemoComp';
 import RefsDemo from './components/RefsDemo';
 import FocusInput from './components/refs/FocusInput';
 import FrParentInput from './components/refs/FrParentInput';
+import ParentCallbackRefTextInput from './components/ParentCallbackRefTextInput';
+import PortalDemo from './components/PortalDemo';
  
 
 
@@ -31,7 +33,8 @@ import FrParentInput from './components/refs/FrParentInput';
 function App() {
   return (
     <div className="App">
-      <FrParentInput/>
+      <PortalDemo/>
+      
 
     </div>
   );
