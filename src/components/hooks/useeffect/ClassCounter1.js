@@ -49,3 +49,4 @@ export class ClassCounter1 extends Component {
 }
 
 export default ClassCounter1
+
