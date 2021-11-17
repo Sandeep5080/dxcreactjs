@@ -24,6 +24,8 @@ import FocusInput from './components/refs/FocusInput';
 import FrParentInput from './components/refs/FrParentInput';
 import ParentCallbackRefTextInput from './components/ParentCallbackRefTextInput';
 import PortalDemo from './components/PortalDemo';
+import ClassCounter from './components/hooks/ClassCounter';
+import HookCounter from './components/hooks/HookCounter';
  
 
 
@@ -33,7 +35,7 @@ import PortalDemo from './components/PortalDemo';
 function App() {
   return (
     <div className="App">
-      <PortalDemo/>
+      <HookCounter/>
       
 
     </div>
