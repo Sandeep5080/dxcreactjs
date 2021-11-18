@@ -39,16 +39,17 @@ import React from 'react';
 
 
 export const UserContext = React.createContext()
+export const BatchContext = React.createContext()
 
 function App() {
   return (
     <div className="App">
       
-      <UserContext.Provider value = {'sandeep'} >
-        <ComponentA/>
-     </UserContext.Provider>
-      
-
+      <UserContext.Provider value={'Sandeep'} >
+        <BatchContext.Provider value={'dxc batch '}>
+          <ComponentA />
+        </BatchContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
