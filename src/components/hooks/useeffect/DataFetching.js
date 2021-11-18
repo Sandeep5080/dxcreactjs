@@ -4,7 +4,12 @@ import axios from 'axios'
 function DataFetching() {
     const [post,setPost] = useState({})
     const [id,setId] = useState(1)
+    const [idFromButtonClick,setIdFromButtonClick] = useState(1)
 
+       /**
+     * ///useEffect is about the lifecycle methods of a class component --
+     *  if you want to use lifecycle methods of a class component in a stateless functional component --then we use useEffect hook
+     */
     
     useEffect(
         ()=> {
@@ -17,8 +22,13 @@ function DataFetching() {
                     console.log(err)
                 })
         },
-        [id]
+        [idFromButtonClick] //run this useEffect hook only once ie after componentDidMount
     )
+
+        const handleClick = () => {
+            setIdFromButtonClick(id)
+        }
+
     
         return (
             <div>
@@ -27,6 +37,7 @@ function DataFetching() {
             value = {id}
             onChange = { e => setId(e.target.value)}
             />
+             <button type = "button" onClick = {handleClick}> fetch post</button>
             <div>{post.title}</div>
            {/* <ul>{
                 posts.map(

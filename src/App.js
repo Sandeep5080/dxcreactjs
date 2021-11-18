@@ -32,16 +32,21 @@ import CounterHook1 from './components/hooks/useeffect/CounterHook1';
 import HookMouse from './components/hooks/useeffect/HookMouse';
 import MouseContainer from './components/hooks/useeffect/MouseContainer';
 import DataFetching from './components/hooks/useeffect/DataFetching';
+import ComponentA from './components/contexthook/ComponentA';
  
+import React from 'react';
 
 
 
-
+export const UserContext = React.createContext()
 
 function App() {
   return (
     <div className="App">
-      <DataFetching/>
+      
+      <UserContext.Provider value = {'sandeep'} >
+        <ComponentA/>
+     </UserContext.Provider>
       
 
     </div>
