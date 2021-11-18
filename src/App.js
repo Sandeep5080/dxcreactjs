@@ -31,6 +31,7 @@ import HookCounter3 from './components/hooks/HookCounter3';
 import CounterHook1 from './components/hooks/useeffect/CounterHook1';
 import HookMouse from './components/hooks/useeffect/HookMouse';
 import MouseContainer from './components/hooks/useeffect/MouseContainer';
+import DataFetching from './components/hooks/useeffect/DataFetching';
  
 
 
@@ -40,7 +41,7 @@ import MouseContainer from './components/hooks/useeffect/MouseContainer';
 function App() {
   return (
     <div className="App">
-      <MouseContainer/> 
+      <DataFetching/>
       
 
     </div>
