@@ -10,6 +10,7 @@ function DataFetching() {
             axios.get('https://jsonplaceholder.typicode.com/posts')
                 .then(res => {
                     console.log(res)
+                    setPosts(res.data)
                 })
                 .catch(err =>{
                     console.log(err)
