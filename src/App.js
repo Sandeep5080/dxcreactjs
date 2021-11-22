@@ -10,6 +10,7 @@ import CompA from './components/contextNreducer/CompA';
 import CompB from './components/contextNreducer/CompB';
 import CompC from './components/contextNreducer/CompC';
 import DataFectching from './components/useReducercases/DataFectching';
+import DataFetchingTwo from './components/useReducercases/DataFetchingTwo';
 
  
 export const CountContext = React.createContext()
@@ -28,7 +29,7 @@ function App() {
   return (
     
     <div className="App">
-     <DataFectching/>
+     <DataFetchingTwo/>
     </div>
     
   );
