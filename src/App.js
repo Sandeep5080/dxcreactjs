@@ -33,24 +33,24 @@ import HookMouse from './components/hooks/useeffect/HookMouse';
 import MouseContainer from './components/hooks/useeffect/MouseContainer';
 import DataFetching from './components/hooks/useeffect/DataFetching';
 import ComponentA from './components/contexthook/ComponentA';
- 
 import React from 'react';
+import CounterOne from './components/reducerhook/CounterOne';
 
-
-
-export const UserContext = React.createContext()
+ 
+export const UserContext = React.createContext()     //exporting a context
 export const BatchContext = React.createContext()
+
+
+
+
 
 function App() {
   return (
     <div className="App">
       
-      <UserContext.Provider value={'Sandeep'} >
-        <BatchContext.Provider value={'dxc batch 2 '}>
-          <ComponentA />
-        </BatchContext.Provider>
-      </UserContext.Provider>
+     <CounterOne/>
     </div>
   );
 }
 export default App;
+
