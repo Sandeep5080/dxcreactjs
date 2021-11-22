@@ -7,7 +7,7 @@ function CompD() {
     return (
         
            <div>
-        <div> compD -- {countContext.count}</div>
+        compD -- {countContext.count}
             <button onClick = {() => countContext.countDispatch('increment')}>Increment</button>
             <button onClick = {() => countContext.countDispatch('decrement')}>decrement</button>
             <button onClick = {() => countContext.countDispatch('reset')}>reset</button> 
