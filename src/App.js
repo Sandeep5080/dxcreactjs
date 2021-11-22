@@ -35,6 +35,7 @@ import DataFetching from './components/hooks/useeffect/DataFetching';
 import ComponentA from './components/contexthook/ComponentA';
 import React from 'react';
 import CounterOne from './components/reducerhook/CounterOne';
+import CounterTwo from './components/reducerhook/CounterTwo';
 
  
 export const UserContext = React.createContext()     //exporting a context
@@ -48,7 +49,7 @@ function App() {
   return (
     <div className="App">
       
-     <CounterOne/>
+     <CounterTwo/>
     </div>
   );
 }
