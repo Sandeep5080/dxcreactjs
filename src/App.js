@@ -46,7 +46,7 @@ function App() {
     <div className="App">
       
       <UserContext.Provider value={'Sandeep'} >
-        <BatchContext.Provider value={'dxc batch '}>
+        <BatchContext.Provider value={'dxc batch 2 '}>
           <ComponentA />
         </BatchContext.Provider>
       </UserContext.Provider>
