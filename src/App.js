@@ -9,6 +9,7 @@ import CounterThree from './components/reducerhook/CounterThree';
 import CompA from './components/contextNreducer/CompA';
 import CompB from './components/contextNreducer/CompB';
 import CompC from './components/contextNreducer/CompC';
+import DataFectching from './components/useReducercases/DataFectching';
 
  
 export const CountContext = React.createContext()
@@ -24,19 +25,12 @@ const reducer = (state,action) => {
 }
 
 function App() {
-  const [count,dispatch] = useReducer(reducer,initialState)
   return (
-    <CountContext.Provider 
-              value = {  
-                        {countState: count, countDispatch: dispatch} 
-                       }>
+    
     <div className="App">
-    Count in app.js is {count}
-      <CompA/>
-      <CompB/>
-      <CompC/>
+     <DataFectching/>
     </div>
-    </CountContext.Provider>
+    
   );
 }
 export default App;
