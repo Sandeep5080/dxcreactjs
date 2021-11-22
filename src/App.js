@@ -36,6 +36,7 @@ import ComponentA from './components/contexthook/ComponentA';
 import React from 'react';
 import CounterOne from './components/reducerhook/CounterOne';
 import CounterTwo from './components/reducerhook/CounterTwo';
+import CounterThree from './components/reducerhook/CounterThree';
 
  
 export const UserContext = React.createContext()     //exporting a context
@@ -49,7 +50,7 @@ function App() {
   return (
     <div className="App">
       
-     <CounterTwo/>
+     <CounterThree/>
     </div>
   );
 }
