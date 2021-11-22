@@ -1,57 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
-import Greet from './components/Greet';
-import Welcome from './components/Welcome';
-import Message from './components/Message';
-import Counter from './components/Counter';
-import FunctionClick from './components/FunctionClick';
-import ClassClick from './components/ClassClick';
-import EventBind from './components/EventBind';
-import ParentComponent from './components/ParentComponent';
-import UserGreeting from './components/UserGreeting';
-import NameList from './components/NameList';
-import Stylesheet from './components/Stylesheet';
-import Inline from './components/Inline';
 import './appStyles.css'
-import styles from './appStyles.module.css'
-import Form from './components/Form';
-import Fragments from './components/Fragments';
-import NewTable from './components/NewTable';
-import Parentcomp from './components/Parentcomp';
-import MemoComp from './components/MemoComp';
-import RefsDemo from './components/RefsDemo';
-import FocusInput from './components/refs/FocusInput';
-import FrParentInput from './components/refs/FrParentInput';
-import ParentCallbackRefTextInput from './components/ParentCallbackRefTextInput';
-import PortalDemo from './components/PortalDemo';
-import ClassCounter from './components/hooks/ClassCounter';
-import HookCounter from './components/hooks/HookCounter';
-import HookCounter2 from './components/hooks/HookCounter2';
-import HookCounter3 from './components/hooks/HookCounter3';
-import CounterHook1 from './components/hooks/useeffect/CounterHook1';
-import HookMouse from './components/hooks/useeffect/HookMouse';
-import MouseContainer from './components/hooks/useeffect/MouseContainer';
-import DataFetching from './components/hooks/useeffect/DataFetching';
-import ComponentA from './components/contexthook/ComponentA';
-import React from 'react';
+
+import React,{useReducer}from 'react';
 import CounterOne from './components/reducerhook/CounterOne';
 import CounterTwo from './components/reducerhook/CounterTwo';
 import CounterThree from './components/reducerhook/CounterThree';
+import CompA from './components/contextNreducer/CompA';
+import CompB from './components/contextNreducer/CompB';
+import CompC from './components/contextNreducer/CompC';
 
  
-export const UserContext = React.createContext()     //exporting a context
-export const BatchContext = React.createContext()
+export const CountContext = React.createContext()
+const initialState = 0
 
-
-
-
+const reducer = (state,action) => {
+    switch(action){
+        case 'increment': return state+1
+        case 'decrement': return state-1
+        case 'reset': return initialState
+        default: return state
+    }
+}
 
 function App() {
+  const [count,dispatch] = useReducer(reducer,initialState)
   return (
+    <CountContext.Provider 
+              value = {  
+                        {countState: count, countDispatch: dispatch} 
+                       }>
     <div className="App">
-      
-     <CounterThree/>
+    Count in app.js is {count}
+      <CompA/>
+      <CompB/>
+      <CompC/>
     </div>
+    </CountContext.Provider>
   );
 }
 export default App;
