@@ -31,4 +31,4 @@ import RegularComp from './RegularComp';
     }
 }
 
-export default Parentcomp
+export default Parentcomp 
