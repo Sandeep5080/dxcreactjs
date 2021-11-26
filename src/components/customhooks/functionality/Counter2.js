@@ -3,7 +3,7 @@ import useCounter from './useCounter'
 
 
 function Counter2() {
-    const [count, increment, decrement, reset] = useCounter()
+    const [count, increment, decrement, reset] = useCounter(10, 5)
 
     return (
         <div>
@@ -17,3 +17,4 @@ function Counter2() {
     )
 }
 
+export default Counter2
